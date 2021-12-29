@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        if (localStorage.getItem('option')) {
+            var option = localStorage.getItem('option');
+            if (option == 'true') {
+                const audioContainer = document.getElementById("audio")
+                audioContainer.play();
+            }
+        }
+   });
+
+   $(document).ready(function(){
+        $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                method: 'get',
+                dataType: 'json',
+                data: {},
+                url:'http://10.120.74.53:3001/',
+                success: function (result) {
+                    alert('success');
+                    if(result) {
+                        console.log('다이어리 불러오기 성공');
+                    } 
+                },
+                error: function (result) {
+                    
+                    console.log('다이어리 불러오기 실패');
+                },
+                async: false,
+            });
+
+    });
+</script>
+
+<body>
+    <audio loop src="music.mp3" style="display: none;" id="audio">
+        <source id="audio">
+    </audio>
+    <div class="mhomepage">
+        <img src="guestbook_ic.png" id="guestbook" style="position: absolute;" type="button"
+            onclick="document.location.href='Guestbook.html'">
+        <img src="home_ic.png" id="home" style="position: absolute;" type="button"
+            onclick="document.location.href='MiniHomepage.html'">
+        <img src="layout.png" id="layout" style="position: relative;">
+        <img src="dialy_ic2.png" id="dialy" style="position: absolute;" type="button"
+            onclick="document.location.href='Dialy.html'">
+
+    </div>
+
+    <img src="mh_profile.png" id="mh_profile">
+    <img src="name_ic.png" id="name_ic">
+    <img src="rename.png" id="rename" style="position: absolute; top: 457px; left: 380px;">
+    <h5 style="position: absolute; font-family: DungGeunMo; top: 438px; left: 230px;">today my name:</h5>
+    <h2 style="position: absolute; font-family: DungGeunMo; top: 438px; left: 330px;">이름</h2>
+    <h3 style="position: absolute; font-family: DungGeunMo; top: 125px; left: 202px;">today 0000 || total 0000</h3>
+    <img src="dialy_img.png" style="position: absolute; left: 560px; top: 150px; width: 650px;">
+    <h6 style="position: absolute; top: 400px; left: 850px;"><a href="Writedialy.html">+다이어리 쓰기</h6></a>
+</body>
+
+</html>

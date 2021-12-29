@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniHomepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    var defaultMusicPlayed = true;
+
+    function show() {
+        document.querySelector(".background").className = "background show";
+    }
+    function show5() {
+        document.querySelector(".background5").className = "background5 show";
+    }
+    function musicParse() {
+        defaultMusicPlayed = false;
+        const audioContainer = document.getElementById("audio")
+        audioContainer.pause();
+        localStorage.setItem('option', defaultMusicPlayed)
+    }
+    function musicPlay() {
+        defaultMusicPlayed = true;
+        const audioContainer = document.getElementById("audio")
+        audioContainer.play();
+    }
+
+    localStorage.setItem('option', defaultMusicPlayed)
+
+</script>
+
+
+
+<body>
+    <audio loop src="music.mp3" style="display: none;" autoplay id="audio">
+        <source id="audio">
+    </audio>
+    <div class="mhomepage">
+        <img src="guestbook_ic.png" id="guestbook" style="position: absolute;" type="button"
+            onclick="document.location.href='Guestbook.html'">
+        <img src="dialy_ic.png" id="dialy" style="position: absolute;" type="button"
+            onclick="document.location.href='Dialy.html'">
+        <img src="layout.png" id="layout" style="position: relative;" width="">
+        <img src="home_ic2.png" id="home" style="position: absolute;" type="button"
+            onclick="document.location.href='MiniHomepage.html'">
+    </div>
+
+    <img src="rename.png" id="rename" style="position: absolute; top: 457px; left: 380px;">
+    <img src="mh_profile.png" id="mh_profile">
+    <img src="name_ic.png" id="name_ic">
+    <h5 style="position: absolute; font-family: DungGeunMo; top: 438px; left: 230px;">today my name:</h5>
+    <h2 style="position: absolute; font-family: DungGeunMo; top: 438px; left: 330px;">이름</h2>
+    <h3 style="position: absolute; font-family: DungGeunMo; top: 125px; left: 202px;">today 0000 || total 0000</h3>
+    <img src="background_music_ic.png" style="position: absolute; top: 155px; left: 1100px;">
+    <img src="line7.png" style="position: absolute; top: 180px; left: 583px; width: 600px;">
+    <h3 style="position: absolute; top: 135px; left: 590px; font-family: DungGeunMo;">Updated news</h3>
+    <h3 style="position: absolute; top: 135px; left: 910px; font-family: DungGeunMo;">컨텐츠</h3>
+    <img src="mh_btn.png" style="position: absolute; top: 190px; left: 850px;">
+    <img src="mh_btn.png" style="position: absolute; top: 190px; left: 1020px;">
+    <img src="mh_btn.png" style="position: absolute; top: 225px; left: 850px;">
+    <img src="mh_btn.png" style="position: absolute; top: 225px; left: 1020px;">
+    <img src="change_profile.png" style="position: absolute; top: 400px; left: 405px;" onclick="show5();">
+    <h4 style="position: absolute; top: 165px; left: 909px; width: 130px; height: 30px;">
+        <pre style="font-family: DungGeunMo; font-size: 13px;" onclick="location.href='Dialy.html'">다이어리</h4></pre>
+        <h4 style="position: absolute; top: 165px; left: 1072px; width: 130px; height: 30px;">
+            <pre style="font-family: DungGeunMo; font-size: 13px;" onclick="show();">배경음변경</h4></pre>
+            <h4 style="position: absolute; top: 199px; left: 916px; width: 130px; height: 30px;">
+                <pre style="font-family: DungGeunMo; font-size: 13px;"
+                    onclick="location.href='Guestbook.html'">방명록</h4></pre>
+                <h4 style="position: absolute; top: 199px; left: 1086px; width: 130px; height: 30px;">
+                    <pre style="font-family: DungGeunMo; font-size: 13px;"
+                        onclick="location.href='Forum.html'">게시판</h4></pre>
+                    <h4 style="position: absolute; top: 234px; left: 925px; width: 130px; height: 30px;">
+                        <h3 style="position: absolute; font-family: DungGeunMo; top: 550px; left: 1104px;">선물하기</h3>
+                        <div class="background">
+                            <div class="window">
+                                <div class="popup">
+                                    <img src="exit_btn.png" style="position: absolute; top: 40px; left: 885px;"
+                                        onclick="document.querySelector('.background').className = 'background';">
+                                    <img src="bgm_list.png" style="position: absolute; top: 45px; left: 45px;">
+                                    <img src="line9.png" style="position: absolute; top:100px; left: 45px;">
+                                    <img src="no_background_music.png"
+                                        style="position: absolute; top: 125px; left: 45px;" id="no_background_music"
+                                        onclick="musicParse();">
+                                    <img src="line10.png" style="position: absolute; top: 158px; left: 45px;">
+                                    <img src="defalut_background_music.png"
+                                        style="position: absolute; top: 175px; left: 45px;" onclick="musicPlay()">
+                                    <img src="line10.png" style="position: absolute; top: 210px; left: 45px;">
+                                    <img src="line10.png" style="position: absolute; top: 260px; left: 45px;">
+                                    <img src="line10.png" style="position: absolute; top: 310px; left: 45px;">
+                                    <img src="line10.png" style="position: absolute; top: 360px; left: 45px;">
+                                    <img src="line10.png" style="position: absolute; top: 410px; left: 45px;">
+                                    <img src="line10.png" style="position: absolute; top: 460px; left: 45px;">
+                                    <img src="select_btn.png" style="position: absolute; top:500px; left: 790px;">
+                                    <img src="select.png" style="position: absolute; top:515px; left: 803px;"
+                                        onclick="document.querySelector('.background').className = 'background';">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="background5">
+                            <div class="window">
+                                <div class="popup4">
+                                    <img src="exit_btn.png" style="position: absolute; top: 35px; left: 640px;"
+                                        onclick="document.querySelector('.background5').className = 'background5';">
+                                    <img src="line13.png" style="position: absolute; top: 80px; left: 30px;">
+                                    <img src="logo2.png" style="position: absolute; top: 20px; left: 20px;">
+                                    <img src="round_profile.png" style="position: absolute; top: 140px; left: 230px;">
+                                    <img src="change_profile_btn.png"
+                                        style="position: absolute; top: 420px; left: 450px;">
+                                    <img src="apply_btn.png" style="position: absolute; top: 420px; left: 570px;">
+                                </div>
+                            </div>
+                        </div>
+
+
+</body>
+
+</html>

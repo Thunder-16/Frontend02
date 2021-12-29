@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    function remove_content() {
+        var element = document.getElementById("write_content");
+        element.remove();
+    };
+
+    function remove_title() {
+        var element = document.getElementById("write_title");
+        element.remove();
+    };
+</script>
+
+<body>
+    <header>
+        <img src="logo.png" id="logo" onclick="location.href='Main.html'">
+        <nav id="menu">
+            <ul>
+                <li id="menu1"><a href="MiniHomepage.html">미니홈피</a></li>
+                <li id="menu2"><a href="Forum.html">게시판</a></li>
+                <li id="menu4"><a href="Giftshop.html" style="margin: 0;">선물가게</a></li>
+                <li id="menu5"><a href="Login.html">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="userinfo">
+        <img src="box.png" id="background2">
+        <img src="profile.png" id="profile2">
+        <img src="logout.png" id="logout_2">
+        <img src="line.png" id="line3_2">
+        <h2 class="nickname_2">ㅇㅇㅇ님</h2>
+        <h3 class="id_2">아이디</h3>
+        <img src="gcoin.png" id="coin_2">
+        <h4 class="coin_amount_2">GSM 코인 : 00</h4>
+        <img src="notice.png" id="notice_ic_2">
+        <h4 class="notice_2">공지사항</h4>
+        <h5 class="coin_history_2">코인사용내역</h5>
+        <img src="minihomepage_ic.png" id="minihomepage_ic_2">
+        <h4 class="minihomepage_txt_2"><a href="MiniHomepage.html">미니홈피</h4></a>
+        <img src="presentshop_ic.png" id="presentshop_ic_2">
+        <h4 class="presentshop_txt_2"><a href="Giftshop.html">선물가게</h4></a>
+    </div>
+
+    <img src="box8.png" id="box8">
+    <h2 id="post_list">글목록</h2>
+    <img src="line5.png" id="line5">
+    <img src="box9.png" id="box9">
+    <img src="post_ic.png" id="post_ic_2">
+    <img src="line6.png" id="line6">
+
+    </body>
+
+</html>

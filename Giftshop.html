@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    function show() {
+        document.querySelector(".background").className = "background show";
+    }
+    function show2() {
+        document.querySelector(".background2").className = "background2 show";
+        var input = document.getElementById('couponNumber');
+        input.value = null;
+    }
+    function coupon() {
+        const number = document.getElementById('couponNumber').value;
+        document.querySelector('.background2').className = 'background2';
+        if (number == "1234567890") 
+            show3();
+        else 
+            show4();
+    }
+    function show3() {
+        document.querySelector(".background3").className = "background3 show";
+    }
+    function show4() {
+        document.querySelector(".background4").className = "background4 show";
+    }
+</script>
+
+<body>
+    <header>
+        <img src="logo.png" id="logo" onclick="location.href='Main.html'">
+        <nav id="menu">
+            <ul>
+                <li id="menu1"><a href="MiniHomepage.html">미니홈피</a></li>
+                <li id="menu2"><a href="Forum.html">게시판</a></li>
+                <li id="menu4"><a href="Giftshop.html" style="margin: 0;">선물가게</a></li>
+                <li id="menu5"><a href="Login.html">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img src="box6.png" id="box6">
+    <img src="profile.png" id="profile_ic">
+    <h2 class="nickname2">ㅇㅇㅇ님</h2>
+    <h4 class="id2">아이디</h4>
+    <img src="logout.png" id="logout2">
+
+    <img src="gcoin.png" id="gcoin2">
+    <h4 class="coin_amount2">GSM 코인 : 00</h4>
+    <h4 class="coin_amount2" id="trade_list">코인거래내역</h4>
+    <img src="box7.png" id="box7">
+    <h1 class="text" id="gift_list">선물목록</h1>
+    <img src="line4.png" id="line5_1">
+    <h1 class="text" id="bgm">BGM</h1>
+    <h1 class="text" id="mini_home">미니홈</h1>
+    <h1 class="text" id="coupon" onclick="show2();">쿠폰</h1>
+    <h1 class="text" id="charge_gsm" onclick="show()">GSM 충전</h1>
+    <img src="line3.png" id="line3_1">
+
+    <div class="background">
+        <div class="window">
+            <div class="popup2">
+                <img src="box10.png">
+                <img src="logo2.png" style="position: absolute; top: 20px; left: 20px;">
+                <img src="buy_text.png" style="position: absolute; left: 200px; top: 130px;"> 
+                <img src="line11.png" style="position: absolute; top: 70px; left: 30px;">
+                <img src="yes_btn.png" style="position: absolute; top: 230px; left: 490px;">
+                <img src="no_btn.png" style="position: absolute; top: 230px; left: 635px;">
+                <img src="exit_btn.png" style="position: absolute; top: 30px; left: 735px;"
+                    onclick="document.querySelector('.background').className = 'background';">
+            </div>
+        </div>
+    </div>
+
+    <div class="background2">
+        <div class="window">
+            <div class="popup2">
+                <img src="box10.png" style="z-index: 1;">
+                <img src="logo2.png" style="position: absolute; top: 20px; left: 20px;">
+                <img src="line11.png" style="position: absolute; top: 70px; left: 30px;">
+                <img src="exit_btn.png" style="position: absolute; top: 30px; left: 735px;"
+                    onclick="document.querySelector('.background2').className = 'background2';">
+                <img src="apply.png" style="position: absolute; top: 230px; left: 620px;" onclick="coupon();">
+                <input type="text" size="50" id="couponNumber"
+                    style="position: absolute; top: 160px; left: 100px; width: 580px; height: 40px; z-index: 10; border-collapse: collapse; border: 1px solid black; border-radius: 5px; outline: none; font-size: 16px; padding-left: 10px;">
+                <img src="input_coupon_number.png" style="position : absolute; top: 130px; left: 100px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="background3">
+        <div class="window">
+            <div class="popup3">
+                <img src="logo2.png" style="position: absolute; top: 15px; left: 20px;">
+                <img src="line12.png" style="position: absolute; top: 70px; left: 30px;">
+                <img src="exit_btn.png" style="position: absolute; top: 30px; left: 630px;"
+                    onclick="document.querySelector('.background3').className = 'background3';">
+                <img src="success.png" style="position: absolute; left: 58px; top: 110px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="background4">
+        <div class="window">
+            <div class="popup3">
+                <img src="logo2.png" style="position: absolute; top: 15px; left: 20px;">
+                <img src="line12.png" style="position: absolute; top: 70px; left: 30px;">
+                <img src="exit_btn.png" style="position: absolute; top: 30px; left: 630px;"
+                    onclick="document.querySelector('.background4').className = 'background4';">
+                <img src="mismatch_coupon_number.png" style="position: absolute; left: 85px; top: 110px;">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
