@@ -8,15 +8,44 @@
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    var id = document.getElementById(id).value;
+    var pw = document.getElementById(pw).value;
+
+    function login() {
+    $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                method: 'POST',
+                dataType: 'json',
+                data: JSON.stringify({
+                    email: id,
+                    password: pw,
+                }),
+                url:'http://10.120.74.53:3001/',
+                success: function (result) {
+                    alert('success');
+                    if(result) {
+                        console.log('통신 성공')
+                    } 
+                },
+                error: function (result) {
+                    alert('오류 발생. 관리자에게 문의하세요.');
+                },
+                async: false,
+            });
+        }
+    
+</script>
 
 <body>
     <div style="text-align: center; margin-top: 50px;">
         <img src="login_bg.png" style="text-align: center; position: relative;">
         <img src="login_logo.png" id="login_logo" style="position: absolute; top: 180px; left: 350px;"> 
-        <input type="text" size="100" style="height: 30px; position: absolute; top: 450px; left: 350px;">
-        <input type="text" size="100" style="height: 30px; position: absolute; top: 520px; left: 350px;">
-        <img src="login_ic.png" id="login_ic" style="position: absolute; top: 600px; left: 345px; width: 712px;" onclick="location.href='Main.html'">
-        <h1 class="login_txt" style="font-family:  DungGeunMo; position: absolute; top: 600px; left: 655px;">로그인</h1>
+        <input type="text" size="100" style="height: 30px; position: absolute; top: 450px; left: 350px;" id="id">
+        <input type="text" size="100" style="height: 30px; position: absolute; top: 520px; left: 350px;" id="pw">
+        <img src="login_ic.png" id="login_ic" style="position: absolute; top: 600px; left: 345px; width: 712px;" onclick="login();">
+        <h1 class="login_txt" style="font-family:  DungGeunMo; position: absolute; top: 600px; left: 655px;" onclick="login();">로그인</h1>
     </div>
     <ul>
         <h3 id="find_id"><a href="">아이디 찾기</a></h3>
